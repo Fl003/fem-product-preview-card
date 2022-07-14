@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --primary-color: hsl(158, 36%, 37%);
+    --secondary-color: hsl(30, 38%, 92%);
+
+    --dark-blue: hsl(212, 21%, 37%);
+    --dark-grey: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-secondary: 'Fraunces', serif;
+
+    font-size: 14px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--secondary-color);
+    font-family: var(--ff-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+#desktop-image {
+    display: none;
+    object-fit: fill;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#mobile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.details {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+h2 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: var(--dark-grey);
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #1E262B;
+    font-family: var(--ff-secondary);
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--dark-grey);
+    font-size: 1rem;
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+}
+
+.newPrice {
+    color: var(--primary-color);
+    font-family: var(--ff-secondary);
+    font-size: 2.2rem;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+    color: var(--dark-grey);
+    margin-left: 25px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.2s linear;
+}
+
+button:hover {
+    background-color: hsl(157, 45%, 15%);
+}
+
+button img {
+    margin-right: 10px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+@media only screen and (min-width: 1440px) {
+    .card {
+        flex-direction: row;
+        width: auto;
+        height: 430px;
+    }
+
+    #desktop-image {
+        display: initial;
+        height: 430px;
+        width: 350px;
+    }
+    
+    #mobile-image {
+        display: none;
+    }
+
+    .details {
+        width: 350px;
+        height: max-content;
+        border-radius: 0px 10px 10px 0px;
+    }
+}
